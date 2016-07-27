@@ -43,7 +43,7 @@ class SheetParser():
     for cell in self.sheet.get_squared_range(self.sheet.min_column, self.sheet.min_row, self.sheet.max_column, 1):
       for row in cell:
         if (self.are_initials(row.value)):
-          initials[row.column] = row.value
+          initials[row.column - 1] = row.value
 
     return initials
 
