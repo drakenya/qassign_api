@@ -32,8 +32,8 @@ class SheetParser():
 
     parts = value.strip().upper().split()
 
-    invalid_parts = ['XXX']
-    valid_parts = [val for val in parts if val not in invalid_parts]
+    valid_part_codes = ['WTC', 'FSC']
+    valid_parts = [val for val in parts if val in valid_part_codes]
 
     return valid_parts
 
